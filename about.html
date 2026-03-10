@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — MCM Enterprises</title>
+  <meta name="description" content="MCM Enterprises is the management and marketing backbone for more than 100 entities across the Toravian Dynasty Trust and House of Terravian portfolio." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-body { background: var(--white); }
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .about-content h2 { margin-bottom: 16px; }
+    .about-content p { margin-bottom: 20px; }
+    .about-sidebar .card { margin-bottom: 20px; }
+    .about-sidebar .card h3 { font-size: 0.9rem; margin-bottom: 8px; color: var(--navy); }
+    .about-sidebar .card p { font-size: 0.85rem; color: var(--text-light); }
+    .detail-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 4px;
+      display: block;
+    }
+    .detail-value {
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .divisions { background: var(--cream); }
+    .division-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+    .division-card + .division-card { margin-top: 20px; }
+    .division-logo img {
+      width: 140px;
+      height: auto;
+    }
+    .division-body h3 { font-size: 1.15rem; margin-bottom: 10px; }
+    .division-body p { font-size: 0.95rem; margin-bottom: 0; }
+    .division-badge {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy-light);
+      background: rgba(27,58,107,0.08);
+      padding: 3px 10px;
+      border-radius: 100px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .values { background: var(--white); }
+
+    @media (max-width: 768px) {
+      .about-inner { grid-template-columns: 1fr; gap: 40px; }
+      .division-card { grid-template-columns: 1fr; }
+      .division-logo img { width: 100px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/mcm-logo.png" alt="MCM Enterprises" />
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ventures.html">Ventures</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Page Hero ── -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span>About MCM Enterprises</span>
+      <h1>Built to Manage. Designed to Scale.</h1>
+      <p>The operational and strategic backbone behind a diverse portfolio of ventures.</p>
+    </div>
+  </div>
+
+  <!-- ── About Body ── -->
+  <div class="about-body">
+    <div class="about-inner">
+
+      <div class="about-content">
+        <span class="section-label">Our Story</span>
+        <h2>Management at the Enterprise Level</h2>
+        <div class="divider"></div>
+
+        <p>MCM Enterprises was established to bring disciplined management, coordinated marketing, and intelligent technology to a growing ecosystem of ventures. What began as an operational layer has grown into a full enterprise management organization — one built to oversee, support, and scale ventures across industries.</p>
+
+        <p>Today, MCM Enterprises provides day-to-day management and marketing services for more than 100 entities operating under the Toravian Dynasty Trust and House of Terravian umbrella. These ventures span technology, wellness, education, entertainment, media, and community — each one operating with the same level of strategic clarity and operational support.</p>
+
+        <p>Across nearly all ventures in the portfolio, MCM Enterprises serves as the primary management contact — handling vendor relationships, brand consistency, partner communications, and operational continuity so that every brand can focus on what it does best.</p>
+
+        <span class="section-label" style="margin-top: 40px;">AI Organization</span>
+        <h2>Technology as a Core Competency</h2>
+        <div class="divider"></div>
+
+        <p>MCM Enterprises houses an internal AI organization purpose-built for enterprise operations. This organization powers the technology infrastructure across our portfolio — from automation and data workflows to intelligent tooling and product development support.</p>
+
+        <p>While primarily internal, this AI capability is architected to be extensible. Select licensing and partnership arrangements may be available for organizations seeking to integrate enterprise-grade AI operations into their own infrastructure.</p>
+      </div>
+
+      <div class="about-sidebar">
+        <div class="card">
+          <span class="detail-label">Legal Entity</span>
+          <p class="detail-value">SlateRiver LLC</p>
+          <p style="font-size:0.82rem; color: var(--text-light); margin-top: 4px;">New Mexico Limited Liability Company</p>
+        </div>
+        <div class="card">
+          <span class="detail-label">Operating DBAs</span>
+          <p class="detail-value">MCM Enterprises</p>
+          <p class="detail-value" style="margin-top: 4px;">Muonelo Communications</p>
+        </div>
+        <div class="card">
+          <span class="detail-label">Portfolio Scope</span>
+          <p class="detail-value">100+ Entities</p>
+          <p style="font-size:0.82rem; color: var(--text-light); margin-top: 4px;">Toravian Dynasty Trust &amp; House of Terravian</p>
+        </div>
+        <div class="card">
+          <span class="detail-label">Industries</span>
+          <p style="font-size:0.88rem; color: var(--text-mid); margin-top: 4px; line-height: 1.8;">Technology · Wellness · Education · Entertainment · Media · Community · Healthcare Communications</p>
+        </div>
+        <div class="card">
+          <span class="detail-label">Website</span>
+          <p class="detail-value">mcmenterprisesllc.com</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Divisions ── -->
+  <section class="divisions">
+    <div class="container">
+      <span class="section-label">Our Divisions</span>
+      <h2 class="section-title">Two Operating Brands</h2>
+      <p class="section-sub">MCM Enterprises operates two distinct brands, each with a defined mandate.</p>
+
+      <div class="division-card">
+        <div class="division-logo">
+          <img src="assets/mcm-logo.png" alt="MCM Enterprises" />
+        </div>
+        <div class="division-body">
+          <span class="division-badge">Management & Marketing</span>
+          <h3>MCM Enterprises</h3>
+          <p>The primary operating brand — handling enterprise management, marketing coordination, brand development, and AI technology operations across the full portfolio. MCM Enterprises is the point of contact for vendor relationships, partnership inquiries, and operational matters across nearly all entities in the Toravian Dynasty Trust and House of Terravian ecosystem.</p>
+        </div>
+      </div>
+
+      <div class="division-card">
+        <div class="division-logo">
+          <img src="assets/muonelo-logo.png" alt="Muonelo Communications" />
+        </div>
+        <div class="division-body">
+          <span class="division-badge">Healthcare Communications</span>
+          <h3>Muonelo Communications</h3>
+          <p>Muonelo Communications operates as MCM Enterprises' healthcare communications division, with a focused mandate on HIPAA-compliant business operations and communications infrastructure. Primarily an internal function, Muonelo Communications supports the healthcare and wellness entities within the portfolio, ensuring compliant, secure, and professional communications standards are upheld across clinical and therapeutic services.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Values ── -->
+  <section class="values">
+    <div class="container">
+      <span class="section-label">How We Operate</span>
+      <h2 class="section-title">Core Operating Principles</h2>
+      <p class="section-sub">Every decision made under the MCM Enterprises umbrella is guided by four principles.</p>
+      <div class="grid-3" style="grid-template-columns: repeat(2, 1fr);">
+
+        <div class="card">
+          <h3>Clarity Over Complexity</h3>
+          <div class="divider" style="margin: 12px 0 16px;"></div>
+          <p>Every brand, product, and operation we manage is structured for maximum clarity — in messaging, in roles, and in outcomes.</p>
+        </div>
+
+        <div class="card">
+          <h3>Scale Without Sacrifice</h3>
+          <div class="divider" style="margin: 12px 0 16px;"></div>
+          <p>Managing 100+ entities demands systems that scale. We build infrastructure first, then grow into it — never the other way around.</p>
+        </div>
+
+        <div class="card">
+          <h3>Compliance as Foundation</h3>
+          <div class="divider" style="margin: 12px 0 16px;"></div>
+          <p>From healthcare communications to financial relationships, we treat compliance as a baseline requirement, not an afterthought.</p>
+        </div>
+
+        <div class="card">
+          <h3>Technology as Leverage</h3>
+          <div class="divider" style="margin: 12px 0 16px;"></div>
+          <p>Our internal AI organization exists because we believe intelligent technology is the single greatest lever for enterprise efficiency and growth.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/mcm-logo.png" alt="MCM Enterprises" />
+          <p>Enterprise management, marketing, and technology operations for the Toravian Dynasty Trust and House of Terravian portfolio.</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ventures.html">Ventures</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MCM Enterprises. A DBA of SlateRiver LLC. All rights reserved.</p>
+        <p>mcmenterprisesllc.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

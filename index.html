@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCM Enterprises — Enterprise Management & Innovation</title>
+  <meta name="description" content="MCM Enterprises is a full-service enterprise management and marketing organization overseeing a portfolio of ventures across technology, wellness, media, and education." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Page-specific ── */
+    .intro { background: var(--white); }
+    .intro-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .intro-text h2 { margin-bottom: 16px; }
+    .intro-text p { margin-bottom: 16px; }
+    .intro-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .intro-visual img {
+      max-width: 320px;
+      width: 100%;
+      opacity: 0.92;
+    }
+
+    .pillars { background: var(--cream); }
+
+    .ventures-preview { background: var(--white); }
+    .ventures-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .venture-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .venture-card:hover {
+      box-shadow: 0 6px 24px rgba(27,58,107,0.10);
+      transform: translateY(-2px);
+    }
+    .venture-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy-light);
+      background: rgba(27,58,107,0.08);
+      padding: 3px 10px;
+      border-radius: 100px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .venture-card h3 { font-size: 1rem; margin-bottom: 8px; }
+    .venture-card p { font-size: 0.88rem; color: var(--text-light); }
+
+    .cta-strip {
+      background: var(--navy);
+      padding: 72px 24px;
+      text-align: center;
+    }
+    .cta-strip h2 { color: var(--white); margin-bottom: 16px; }
+    .cta-strip p { color: rgba(255,255,255,0.7); max-width: 480px; margin: 0 auto 36px; }
+
+    @media (max-width: 768px) {
+      .intro-inner { grid-template-columns: 1fr; gap: 40px; }
+      .intro-visual { order: -1; }
+      .ventures-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .ventures-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/mcm-logo.png" alt="MCM Enterprises" />
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ventures.html">Ventures</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">MCM Enterprises</span>
+      <h1>The Enterprise Behind the Enterprise</h1>
+      <p>Full-service management, marketing, and technology operations for a growing portfolio of ventures across wellness, technology, media, and education.</p>
+      <div class="hero-actions">
+        <a href="ventures.html" class="btn-hero-primary">Our Ventures</a>
+        <a href="contact.html" class="btn-hero-outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Trust bar ── -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <span class="trust-item">Enterprise Management</span>
+      <span class="trust-item">Brand Portfolio</span>
+      <span class="trust-item">AI-Powered Operations</span>
+      <span class="trust-item">Multi-Industry Reach</span>
+      <span class="trust-item">mcmenterprisesllc.com</span>
+    </div>
+  </div>
+
+  <!-- ── Intro / Mission ── -->
+  <div class="intro">
+    <div class="intro-inner">
+      <div class="intro-text">
+        <span class="section-label">Who We Are</span>
+        <h2>Management at Scale</h2>
+        <div class="divider"></div>
+        <p>MCM Enterprises is the operational and strategic backbone behind a broad portfolio of ventures. We handle day-to-day management, marketing coordination, brand development, and technology implementation across more than 100 entities operating under the Toravian Dynasty Trust and House of Terravian umbrella.</p>
+        <p>From consumer-facing digital products to professional services, MCM Enterprises ensures every venture operates with clarity, consistency, and forward momentum.</p>
+        <a href="about.html" class="btn btn-outline" style="margin-top: 8px;">Learn More</a>
+      </div>
+      <div class="intro-visual">
+        <img src="assets/mcm-logo.png" alt="MCM Enterprises" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Pillars ── -->
+  <section class="pillars">
+    <div class="container">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Three Core Capabilities</h2>
+      <p class="section-sub">Every venture under our management benefits from the same three pillars of operational excellence.</p>
+      <div class="grid-3">
+
+        <div class="card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Enterprise Management</h3>
+          <div class="divider" style="margin: 12px 0 16px;"></div>
+          <p>Operational oversight, vendor coordination, compliance tracking, and day-to-day execution across all portfolio entities.</p>
+        </div>
+
+        <div class="card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Marketing & Growth</h3>
+          <div class="divider" style="margin: 12px 0 16px;"></div>
+          <p>Brand strategy, audience development, digital presence management, and growth marketing for consumer and professional ventures alike.</p>
+        </div>
+
+        <div class="card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <h3>AI-Powered Technology</h3>
+          <div class="divider" style="margin: 12px 0 16px;"></div>
+          <p>An internal AI organization built for enterprise operations — capable of powering our own ventures and available for external licensing partnerships.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Ventures Preview ── -->
+  <section class="ventures-preview">
+    <div class="container">
+      <span class="section-label">Portfolio</span>
+      <h2 class="section-title">Select Ventures</h2>
+      <p class="section-sub">A cross-industry portfolio spanning digital products, wellness, community, and education.</p>
+      <div class="ventures-grid">
+
+        <div class="venture-card">
+          <span class="venture-tag">Technology</span>
+          <h3>Noo World Platforms</h3>
+          <p>A multi-brand digital ecosystem powering platforms across knowledge, community, and identity.</p>
+        </div>
+
+        <div class="venture-card">
+          <span class="venture-tag">Wellness</span>
+          <h3>Mr. Metaphysical</h3>
+          <p>Health, wellness, therapy support, and consciousness-based personal development offerings.</p>
+        </div>
+
+        <div class="venture-card">
+          <span class="venture-tag">Productivity</span>
+          <h3>Win The Hour!™</h3>
+          <p>A time-tracking and personal performance mobile application built around hour-by-hour accountability.</p>
+        </div>
+
+        <div class="venture-card">
+          <span class="venture-tag">Education</span>
+          <h3>TRPSH</h3>
+          <p>Guiding high school students toward financial literacy, college readiness, and life after graduation.</p>
+        </div>
+
+        <div class="venture-card">
+          <span class="venture-tag">Community</span>
+          <h3>Saga of Polarity</h3>
+          <p>A spiritual and philosophical community forum exploring consciousness, Law of One, and collective growth.</p>
+        </div>
+
+        <div class="venture-card">
+          <span class="venture-tag">Entertainment</span>
+          <h3>Crownstrike</h3>
+          <p>A competitive gaming and performance culture platform built for the modern player.</p>
+        </div>
+
+      </div>
+      <div style="margin-top: 40px;">
+        <a href="ventures.html" class="btn btn-primary">View All Ventures</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA Strip ── -->
+  <section class="cta-strip">
+    <h2>Ready to Work With Us?</h2>
+    <p>Whether you're a vendor, partner, financial institution, or potential client — we're open to conversation.</p>
+    <a href="contact.html" class="btn-hero-primary">Contact MCM Enterprises</a>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/mcm-logo.png" alt="MCM Enterprises" />
+          <p>Enterprise management, marketing, and technology operations for the Toravian Dynasty Trust and House of Terravian portfolio.</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ventures.html">Ventures</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MCM Enterprises. A DBA of SlateRiver LLC. All rights reserved.</p>
+        <p>mcmenterprisesllc.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

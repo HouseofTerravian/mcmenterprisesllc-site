@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ventures — MCM Enterprises</title>
+  <meta name="description" content="Explore the portfolio of ventures managed by MCM Enterprises across technology, wellness, education, entertainment, and community." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .ventures-section { background: var(--white); }
+
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .filter-btn {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 100px;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      color: var(--text-mid);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+
+    .ventures-full-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .v-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .v-card:hover {
+      box-shadow: 0 8px 28px rgba(27,58,107,0.10);
+      transform: translateY(-2px);
+    }
+    .v-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy-light);
+      background: rgba(27,58,107,0.08);
+      padding: 3px 10px;
+      border-radius: 100px;
+      display: inline-block;
+      width: fit-content;
+    }
+    .v-card h3 { font-size: 1.05rem; margin: 0; }
+    .v-card p { font-size: 0.88rem; color: var(--text-light); margin: 0; flex: 1; }
+    .v-card a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--navy);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: gap 0.2s;
+    }
+    .v-card a:hover { gap: 8px; }
+
+    .v-card[data-hidden="true"] { display: none; }
+
+    .portfolio-note {
+      background: var(--cream-dark);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-top: 40px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .portfolio-note-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--navy);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .portfolio-note-icon svg { width: 18px; height: 18px; stroke: #fff; fill: none; stroke-width: 2; }
+    .portfolio-note p { font-size: 0.9rem; color: var(--text-mid); margin: 0; }
+    .portfolio-note strong { color: var(--navy); }
+
+    @media (max-width: 768px) {
+      .ventures-full-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .ventures-full-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/mcm-logo.png" alt="MCM Enterprises" />
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ventures.html">Ventures</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Page Hero ── -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span>Portfolio</span>
+      <h1>Ventures &amp; Brands</h1>
+      <p>A cross-industry portfolio of ventures managed and supported by MCM Enterprises.</p>
+    </div>
+  </div>
+
+  <!-- ── Ventures Grid ── -->
+  <section class="ventures-section">
+    <div class="container">
+
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="technology">Technology</button>
+        <button class="filter-btn" data-filter="wellness">Wellness</button>
+        <button class="filter-btn" data-filter="education">Education</button>
+        <button class="filter-btn" data-filter="entertainment">Entertainment</button>
+        <button class="filter-btn" data-filter="community">Community</button>
+      </div>
+
+      <div class="ventures-full-grid" id="ventures-grid">
+
+        <div class="v-card" data-category="technology">
+          <span class="v-tag">Technology</span>
+          <h3>Noo World Platforms</h3>
+          <p>A multi-brand digital ecosystem powering platforms across knowledge, community, identity, and consciousness — including Forbidden Gnosis and Support Groups Online.</p>
+          <a href="https://www.thenooworld.com" target="_blank" rel="noopener">Visit &#8594;</a>
+        </div>
+
+        <div class="v-card" data-category="wellness">
+          <span class="v-tag">Wellness</span>
+          <h3>Mr. Metaphysical Health &amp; Wellness</h3>
+          <p>A dual-mode authority platform offering therapy support and personal growth services, including counseling, coaching, and the Catalyst Journal.</p>
+          <a href="https://mrmetaphysical.com" target="_blank" rel="noopener">Visit &#8594;</a>
+        </div>
+
+        <div class="v-card" data-category="wellness">
+          <span class="v-tag">Wellness</span>
+          <h3>Mr. Metaphysical — The Global Wellness Institute</h3>
+          <p>A consciousness-based, private-pay institute offering gatherings, intensives, and retreat experiences. "This Is Not Therapy."</p>
+          <a href="https://institute.mrmetaphysical.io" target="_blank" rel="noopener">Visit &#8594;</a>
+        </div>
+
+        <div class="v-card" data-category="wellness">
+          <span class="v-tag">Wellness</span>
+          <h3>Mr. Metaphysical — The Circle</h3>
+          <p>A modern personal growth coaching platform featuring a filterable coach directory, group programs, and non-clinical personal development services.</p>
+          <a href="https://circle.mrmetaphysical.io" target="_blank" rel="noopener">Visit &#8594;</a>
+        </div>
+
+        <div class="v-card" data-category="technology">
+          <span class="v-tag">Productivity</span>
+          <h3>Win The Hour!™</h3>
+          <p>A mobile productivity application built around hour-by-hour accountability — tracking wins, losses, M.Y.B.E.D., and personal performance over time.</p>
+          <a href="https://app.crownstrikeofficial.com" target="_blank" rel="noopener">Visit &#8594;</a>
+        </div>
+
+        <div class="v-card" data-category="education">
+          <span class="v-tag">Education</span>
+          <h3>TRPSH</h3>
+          <p>"The Right Path Starts Here." Guiding high school students toward financial literacy, college readiness, and life planning through courses and banking partnerships.</p>
+        </div>
+
+        <div class="v-card" data-category="community">
+          <span class="v-tag">Community</span>
+          <h3>Saga of Polarity</h3>
+          <p>A spiritual and philosophical online community forum exploring consciousness, the Law of One, metaphysical practice, and collective growth.</p>
+          <a href="https://sagaofpolarity.forum" target="_blank" rel="noopener">Visit &#8594;</a>
+        </div>
+
+        <div class="v-card" data-category="entertainment">
+          <span class="v-tag">Entertainment</span>
+          <h3>Crownstrike</h3>
+          <p>A competitive gaming and performance culture platform built for the modern player. Access competitive tools, community, and performance tracking.</p>
+          <a href="https://app.crownstrikeofficial.com" target="_blank" rel="noopener">Visit &#8594;</a>
+        </div>
+
+      </div>
+
+      <div class="portfolio-note">
+        <div class="portfolio-note-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        </div>
+        <p><strong>Note:</strong> The ventures listed above represent a selection of the MCM Enterprises portfolio. With more than 100 entities under management across the Toravian Dynasty Trust and House of Terravian umbrella, not all ventures are publicly listed. For partnership, vendor, or inquiry purposes, please <a href="contact.html" style="color: var(--navy); font-weight: 600;">contact us directly</a>.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/mcm-logo.png" alt="MCM Enterprises" />
+          <p>Enterprise management, marketing, and technology operations for the Toravian Dynasty Trust and House of Terravian portfolio.</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ventures.html">Ventures</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MCM Enterprises. A DBA of SlateRiver LLC. All rights reserved.</p>
+        <p>mcmenterprisesllc.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Filter logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.v-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.removeAttribute('data-hidden');
+          } else {
+            card.setAttribute('data-hidden', 'true');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
