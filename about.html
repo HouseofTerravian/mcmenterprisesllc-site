@@ -204,11 +204,157 @@
   </section>
 
   <!-- ── Enterprise Structure ── -->
-  <section style="background: var(--cream-dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 64px 0;">
+  <section style="background: var(--cream-dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 72px 0;">
     <div class="container">
       <span class="section-label">Enterprise Structure</span>
-      <h2 class="section-title">Role Clarity</h2>
-      <p class="section-sub" style="max-width: 680px;">Understanding how MCM Enterprises relates to the businesses in its network.</p>
+      <h2 class="section-title">Organizational Transparency</h2>
+      <p class="section-sub" style="max-width: 680px;">The broader enterprise consists of independent operating entities supported by shared administrative and coordination services provided by MCM Enterprises.</p>
+
+      <!-- ── Org Diagram ── -->
+      <div style="max-width: 760px; margin: 0 auto 48px;">
+
+        <style>
+          .org-node {
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: 6px;
+            padding: 14px 24px;
+            text-align: center;
+            display: inline-block;
+          }
+          .org-node-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            display: block;
+            margin-bottom: 4px;
+          }
+          .org-node-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: var(--navy);
+          }
+          .org-node-accent {
+            background: var(--navy);
+            border-color: var(--navy);
+          }
+          .org-node-accent .org-node-label { color: rgba(255,255,255,0.55); }
+          .org-node-accent .org-node-name  { color: var(--white); }
+          .org-node-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.65);
+            display: block;
+            margin-top: 3px;
+          }
+          .org-connector-v {
+            width: 1.5px;
+            background: var(--border);
+            height: 32px;
+            margin: 0 auto;
+          }
+          .org-row {
+            display: flex;
+            justify-content: center;
+          }
+          .org-branches {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            position: relative;
+            padding-top: 32px;
+          }
+          .org-branch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            max-width: 200px;
+            position: relative;
+          }
+          /* top horizontal line across all branches */
+          .org-branches::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: calc(100% / 6);
+            right: calc(100% / 6);
+            height: 1.5px;
+            background: var(--border);
+          }
+          /* vertical drop from top line to each node */
+          .org-branch::before {
+            content: '';
+            width: 1.5px;
+            height: 32px;
+            background: var(--border);
+            display: block;
+            margin: 0 auto 0;
+          }
+        </style>
+
+        <!-- Level 1: Trust -->
+        <div class="org-row">
+          <div class="org-node">
+            <span class="org-node-label">Governing Structure</span>
+            <span class="org-node-name">Toravian Dynasty Trust</span>
+          </div>
+        </div>
+
+        <!-- Connector -->
+        <div class="org-connector-v"></div>
+
+        <!-- Level 2: House of Terravian -->
+        <div class="org-row">
+          <div class="org-node">
+            <span class="org-node-label">Ecosystem</span>
+            <span class="org-node-name">House of Terravian</span>
+          </div>
+        </div>
+
+        <!-- Connector -->
+        <div class="org-connector-v"></div>
+
+        <!-- Level 3: MCM (accented) -->
+        <div class="org-row">
+          <div class="org-node org-node-accent">
+            <span class="org-node-label">Shared Services Layer</span>
+            <span class="org-node-name">MCM Enterprises</span>
+            <span class="org-node-sub">Administrative · Communications · Coordination</span>
+          </div>
+        </div>
+
+        <!-- Branches to operating entities -->
+        <div class="org-branches">
+          <div class="org-branch">
+            <div class="org-node" style="width:100%; box-sizing:border-box;">
+              <span class="org-node-label">Independent Entity</span>
+              <span class="org-node-name" style="font-size:0.82rem;">Noo World Platforms</span>
+            </div>
+          </div>
+          <div class="org-branch">
+            <div class="org-node" style="width:100%; box-sizing:border-box;">
+              <span class="org-node-label">Independent Entity</span>
+              <span class="org-node-name" style="font-size:0.82rem;">Mr. Metaphysical</span>
+            </div>
+          </div>
+          <div class="org-branch">
+            <div class="org-node" style="width:100%; box-sizing:border-box;">
+              <span class="org-node-label">Independent Entity</span>
+              <span class="org-node-name" style="font-size:0.82rem;">+ Affiliated Initiatives</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diagram caption -->
+        <p style="text-align:center; font-size:0.78rem; color:var(--text-light); margin-top:20px; font-style:italic;">Each operating entity maintains its own legal structure, management, and regulatory responsibilities independent of MCM Enterprises.</p>
+      </div>
+
+      <!-- Prose clarification -->
       <div style="background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 36px 40px; max-width: 720px;">
         <p style="font-size: 0.98rem; color: var(--text-mid); margin-bottom: 16px; line-height: 1.85;">MCM Enterprises provides administrative, communications, and coordination services for a network of affiliated initiatives and independent operating businesses.</p>
         <p style="font-size: 0.98rem; color: var(--text-mid); margin-bottom: 16px; line-height: 1.85;">Each operating entity within the broader ecosystem maintains its own legal structure, management, contracts, policies, and regulatory compliance responsibilities.</p>
