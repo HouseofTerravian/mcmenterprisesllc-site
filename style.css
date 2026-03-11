@@ -536,6 +536,9 @@ footer {
   .nav-hamburger { display: flex; }
   .grid-3 { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
+  .transparency-strip { grid-template-columns: 1fr !important; }
+  .transparency-strip > div { border-right: none !important; border-bottom: 1px solid var(--border); }
+  .transparency-strip > div:last-child { border-bottom: none; }
   .footer-top { flex-direction: column; }
   .footer-bottom { flex-direction: column; text-align: center; }
   section { padding: 56px 0; }
