@@ -82,7 +82,7 @@ nav {
   z-index: 100;
   background: var(--white);
   border-bottom: 1px solid var(--border);
-  padding: 0 24px;
+  padding: 0 12px 0 0;
 }
 
 .nav-inner {
@@ -94,8 +94,13 @@ nav {
   height: 72px;
 }
 
+.nav-logo {
+  padding-left: 0;
+  margin-left: -4px;
+}
+
 .nav-logo img {
-  height: 48px;
+  height: 58px;
   width: auto;
   display: block;
 }
