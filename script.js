@@ -37,6 +37,14 @@ if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    const checkbox = document.getElementById('terms-agree');
+    if (checkbox && !checkbox.checked) {
+      formStatus.textContent = 'You must agree to the Terms of Use before submitting.';
+      formStatus.className = 'form-status error';
+      formStatus.style.display = 'block';
+      return;
+    }
+
     const btn = contactForm.querySelector('button[type="submit"]');
     btn.disabled = true;
     btn.textContent = 'Sending...';
